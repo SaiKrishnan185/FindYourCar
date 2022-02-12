@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.header{
+    height: 100vh;
+/*    background-image: url(back.jpg);*/
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-family:inherit;
+    color:white;
+}
+
+h1{
+    font-size: 80px;
+    
+}
+
+.zips{
+    margin-left: 150px;
+    width: 150px;
+    height: 5%;
+    padding: 10px;
+    border-radius: 50px;
+    border-style: none;
+    align-content: center;
+    outline: none;
+    text-align: center;
+}
+
+.distance{
+    margin-left: 125px;
+    color: white;
+    font-size: 20px;
+}
+
+.st{
+    margin-left: 175px;
+    width: 100px;
+    height: 3%;
+    border-radius: 50px;
+    color: black;
+    
+}
+
+table{
+    color:white;
+    border-collapse: separate;
+    #border-spacing: 20px 10px;
+}
