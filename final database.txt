@@ -1,0 +1,4 @@
+CREATE TABLE final AS(
+SELECT l.year, l.make, l.model, l.price, d.dealer_name as DealerName, z.State, z.Place as City, z.zip as ZipCode FROM ((listings l 
+INNER JOIN dealers d ON l.dealer_number = d.dealer_number) 
+INNER JOIN zips z ON l.zip = z.zip));

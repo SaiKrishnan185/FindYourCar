@@ -1,0 +1,36 @@
+create table listings(
+vehicle_live_id INT NOT NULL PRIMARY KEY,
+vin VARCHAR(100),
+stock VARCHAR(50),
+make VARCHAR(50),
+model VARCHAR(50),
+trim VARCHAR(100),
+year VARCHAR(50),
+amenities VARCHAR(5000),
+price VARCHAR(50),
+miles VARCHAR(50),
+exterior VARCHAR(50),
+description VARCHAR(5000),
+certified VARCHAR(10),
+transmission VARCHAR(10),
+body_type VARCHAR(100),
+speeds VARCHAR(50),
+doors VARCHAR(10),
+cylinders VARCHAR(10),
+engine VARCHAR(50),
+displacement VARCHAR(10),
+zip INT,
+phone VARCHAR(10),
+imagefile VARCHAR(5000),
+dealer_number VARCHAR(10),
+Distance VARCHAR(10)
+);
+
+
+
+
+
+LOAD DATA INFILE "//var//lib//mysql-files//listings.csv" INTO TABLE listings 
+CHARACTER SET latin1
+COLUMNS TERMINATED BY ',' ENCLOSED BY '"'  LINES TERMINATED BY '\r\n'  IGNORE 1 LINES 
+(vehicle_live_id,vin,stock,make,model,trim,year,amenities,price,miles,exterior,description,certified,transmission,body_type,speeds,doors,cylinders,engine,displacement,zip,phone,imagefile,dealer_number,Distance);

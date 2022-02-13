@@ -1,0 +1,25 @@
+create table zips(
+zip VARCHAR(50) NOT NULL PRIMARY KEY,
+code VARCHAR(10),
+latitude VARCHAR(50),
+longitude VARCHAR(50),
+place VARCHAR(50),
+state VARCHAR(50)
+);
+
+
+
+
+
+LOAD DATA INFILE "//var//lib//mysql-files//zip_info.csv" INTO TABLE zips 
+CHARACTER SET latin1
+COLUMNS TERMINATED BY ',' ENCLOSED BY '"'  LINES TERMINATED BY '\r\n' 
+(zip,code,latitude,longitude,place,state);
+
+
+
+
+ALTER TABLE listings MODIFY zip varchar(15);
+
+
+#Interchange longitude and latitude

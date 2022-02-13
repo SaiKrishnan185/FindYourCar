@@ -1,0 +1,17 @@
+mysql -u root -p
+
+create  database cars_db;
+
+
+
+create table dealers(
+dealer_number VARCHAR(100) NOT NULL PRIMARY KEY,
+dealer_name VARCHAR(200),
+dealer_address_1 VARCHAR(200)
+);
+
+
+LOAD DATA INFILE "//var//lib//mysql-files//dealers.csv" INTO TABLE dealers 
+CHARACTER SET latin1
+COLUMNS TERMINATED BY ',' ENCLOSED BY '"'  LINES TERMINATED BY '\r\n'  IGNORE 1 LINES 
+(dealer_number,dealer_name,dealer_address_1);
